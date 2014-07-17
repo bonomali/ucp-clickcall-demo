@@ -43,7 +43,9 @@ $(document).ready(function(){
   $('#username').val("dude");
   $('#extension').val("499");
   $('#password').val("dude1971");
-  $('#url').val("https://62.181.215.40:7878/ipecs_svc");
+  //$('#url').val("https://62.181.215.40:7878/ipecs_svc");
+  $('#ip').val("62.181.215.40");
+  $('#port').val("7878");
   $('#callto').val("401");
 
   // Reloade page
@@ -66,7 +68,8 @@ $(document).ready(function(){
                + '<srcinfo><dialnum>' + $('#extension').val() + '</dialnum></srcinfo>'
                + '<destinfo calltype="single"><dialnum>' + $('#callto').val() + '</dialnum></destinfo>'
                + '</clicktocall></request></ipecs_svc>';
-    var xmldata = '<data><ucpxml><![CDATA[' + ucpxml + ']]></ucpxml><ucpurl>' + $('#url').val() + '</ucpurl></data>';
+    var url = "https://" +  $('#ip').val() + ":" + $('#port').val() + "/ipecs_svc";
+    var xmldata = '<data><ucpxml><![CDATA[' + ucpxml + ']]></ucpxml><ucpurl>' + url + '</ucpurl></data>';
     
     // Post data
     $.ajax({
@@ -103,7 +106,7 @@ $(document).ready(function(){
     .always(function() { 
       // Show UCP XML request 
       $("#response").removeClass("hide");
-      $(".urlstr").html($('#url').val());
+      $(".urlstr").html(url);
       $("#ucpxml-request").html(formatXml(ucpxml, true));
       // Stop button spinner
       l.stop();

@@ -7,22 +7,22 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 /* Licencia
 -------------------------------------------------- */
 .header { padding: 13px 0 10px; background-color: #f7f7f7; }
-.email span { display: none; }
 .content { margin-bottom: 15px; }
+.form-inline .form-group { margin-bottom: 10px; }
 .alert { overflow: hidden; }
 #status-label { display: inline-block; vertical-align: top; font-weight: normal; }
 #error-messages { clear: both; }
 #error-messages:empty { display: none; }
 #reset.btn, #dopost.btn { margin-left: 10px; margin-bottom: 15px; }
 #response  { clear: both; }
-#response  .url { font-weight: bold; }
+#response  .url { margin-bottom: 10px; }
 #ucpxml-response { margin-bottom: 10px; }
 .footer { display: table; }
 .footer .container { display: table-cell; text-align: center; vertical-align: middle; }
 
 
-@media only screen and (min-width: 0px) and (max-width: 600px) {
- /*.email { display: none; }*/
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  /*#port, #ip { width: 100%; display: block; }*/
 }
 
 

@@ -62,36 +62,43 @@
   <input type="text" class="form-control input-lg" id="password" placeholder="Password" required>
   <input type="number" class="form-control input-lg" id="callto" placeholder="Phone number" required-->  
        <h2>Settings</h2>
-        <form data-toggle="validator" role="form">  
-          <h4>URL to UCP</h4>        
+       
+        <form role="form" class="form-inline">  
+          <h4>UCP Connection</h4>        
           <div class="form-group">
-            <label for="url" class="control-label sr-only">UCP URL</label>
-            <input type="url" class="form-control input-lg" id="url" placeholder="Service URL" data-error="UCP only supports Https access. The default port is 7878. Example: https://62.181.215.143:7878/ipecs_svc." required>
-            <span class="help-block with-errors"></span>
+            <label for="ip" class="control-label sr-only">IP Address</label>
+            <input type="text" class="form-control input-lg" id="ip" placeholder="IP Address" required>
           </div>       
+          <div class="form-group">
+            <label for="port" class="control-label sr-only">UCP port</label>
+            <input type="text" class="form-control input-lg" id="port" placeholder="Port" required>
+          </div>
+        <!--/form>
+        
+        <form role="form" class="form-inline"-->          
           <h4>Extension settings</h4>
           <div class="form-group">
             <label for="username" class="control-label sr-only">Username</label>
             <input type="text" class="form-control input-lg" id="username" placeholder="User name" required>
-            <div class="help-block with-errors"></div>
           </div>
-          <div class="form-group">
-            <label for="extension" class="control-label sr-only">Extension number</label>
-            <input type="number" class="form-control input-lg" id="extension" placeholder="Extension number" data-error="Only numeric input allowed." required>
-            <div class="help-block with-errors"></div>
-          </div>  
           <div class="form-group">
             <label for="password" class="control-label sr-only">Password</label>
             <input type="text" class="form-control input-lg" id="password" placeholder="Password" required>
           </div>
-        </form> 
+        <!--/form>
+        
+        <form role="form"-->
+          <div class="form-group">
+            <label for="extension" class="control-label sr-only">Extension number</label>
+            <input type="number" class="form-control input-lg" id="extension" placeholder="Extension number" required>
+          </div>  
+        <!--/form> 
       
-        <form data-toggle="validator" role="form" class="form-inline">
+        <form role="form" class="form-inline"-->
           <h2>Generate call</h3>
           <div class="form-group callto">
             <label for="callto" class="control-label sr-only">Call to</label>
-            <input type="number" class="form-control input-lg col-sm-2" id="callto" placeholder="Phone number" data-error="Only numeric input allowed, e.g. 08123456." required>
-            <div class="help-block with-errors"></div>
+            <input type="number" class="form-control input-lg" id="callto" placeholder="Phone number" required>
           </div>            
           <button type="reset" class="btn btn-primary btn-lg pull-right" id="reset">Reset</button>
           <button type="button" class="btn btn-success btn-lg ladda-button pull-right" data-style="expand-right" id="dopost"><span class="ladda-label">Call</span></button>
@@ -101,7 +108,7 @@
         
         <div id="response" class="hide">
           <h2>Response</h2> 
-          <div><span class="url">URL: </span><span class="urlstr"></span></div>        
+          <div class="url">URL: <span class="urlstr"></span></div>        
           <div class="alert alert-info" role="alert">
             <h4>Response from UCP</h4>
             <div id="ucpxml-response" class="">...</div>
@@ -129,7 +136,6 @@
   <!-- Placed at the end of the document so the pages load faster -->     
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
-  <script src="licencia/validator.min.js"></script>
   <script src="licencia/spin.min.js"></script>
   <script src="licencia/ladda.min.js"></script>
   <script src="httppost.js"></script>  

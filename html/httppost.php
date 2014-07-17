@@ -41,16 +41,3 @@ try {
     print '<error>' . $e->getMessage() . '</error>';
 }
 print $response;
-
-
-/*
-$response = _post_request($ucpurl, $ucpxml);
-if ($response === FALSE) {
-//throw new Exception("Problem reading data from $url, $php_errormsg");
-	//print '<error>' . $php_errormsg . '</error>';
-}
-else {
-    
-}
-
-print $response; */
