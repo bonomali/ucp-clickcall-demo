@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="UCP Clickcall demo based on AJAX and Bootstrap.">
+  <meta name="author" content="Olle Sjögren, Licencia Telecom AB, 2014">
   <link rel="icon" href="licencia/favicon.png">
   
-  <title>ClickCall Web Service Demo</title>
+  <title>UCP Clickcall Web Service Demo</title>
   
   <!-- Bootstrap core CSS -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -51,13 +51,16 @@
         <h2>Description</h2>
         <p>This a demo that uses the new UCP web service ClickCall.</p>
 
-        
-                 
       </div>
       
       <!-- Form --> 
       <div class="col-md-5">
-
+  <!--input type="text" class="form-control input-lg" name="ip" placeholder="IP Address" value="62.181.215.140">
+  <input type="number" class="form-control input-lg" name="port" placeholder="Port" value="7878" min="1" max="65535">
+  <input type="text" class="form-control input-lg" id="username" placeholder="User name" required>
+  <input type="number" class="form-control input-lg" id="extension" placeholder="Extension number" required>
+  <input type="text" class="form-control input-lg" id="password" placeholder="Password" required>
+  <input type="number" class="form-control input-lg" id="callto" placeholder="Phone number" required-->  
        <h2>Settings</h2>
         <form data-toggle="validator" role="form">  
           <h4>URL to UCP</h4>        
@@ -65,7 +68,6 @@
             <label for="url" class="control-label sr-only">UCP URL</label>
             <input type="url" class="form-control input-lg" id="url" placeholder="Service URL" data-error="UCP only supports Https access. The default port is 7878. Example: https://62.181.215.143:7878/ipecs_svc." required>
             <span class="help-block with-errors"></span>
-            <!--span class="help-block">UCP only supports Https access. The default port is 7878. Example: <code>https://62.181.215.143:7878/ipecs_svc</code>.</span-->
           </div>       
           <h4>Extension settings</h4>
           <div class="form-group">
@@ -85,7 +87,7 @@
         </form> 
       
         <form data-toggle="validator" role="form" class="form-inline">
-          <h2>Generate call <!--span id="status-label" class="label label-success">Success</span--></h3>
+          <h2>Generate call</h3>
           <div class="form-group callto">
             <label for="callto" class="control-label sr-only">Call to</label>
             <input type="number" class="form-control input-lg col-sm-2" id="callto" placeholder="Phone number" data-error="Only numeric input allowed, e.g. 08123456." required>
@@ -98,12 +100,13 @@
         </form> 
         
         <div id="response" class="hide">
-          <h2>Response</h2>        
+          <h2>Response</h2> 
+          <div><span class="url">URL: </span><span class="urlstr"></span></div>        
           <div class="alert alert-info" role="alert">
-          <h4>Response from UCP</h4>
-          <div id="ucpxml-response" class="">...</div>
-          <h4>XML Request to UCP</h4>
-          <div id="ucpxml-request" class="">...</div>        
+            <h4>Response from UCP</h4>
+            <div id="ucpxml-response" class="">...</div>
+            <h4>XML Request to UCP</h4>
+            <div id="ucpxml-request" class="">...</div>        
           </div>
         </div>
         
@@ -116,7 +119,8 @@
     <!-- Site footer -->
     <div class="footer">
       <div class="container">
-        <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for <a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden (<span class="glyphicon glyphicon-envelope"></span> <span class="email">olle.sjogren@licencia<span>null</span>.se</span>).
+        By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for 
+        <a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden.
       </div>    
     </div>     
 

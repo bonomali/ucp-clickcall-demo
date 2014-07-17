@@ -51,6 +51,9 @@ $(document).ready(function(){
     location.reload();
   });
   
+  // Init tooltip
+  $('#tooltip').tooltip();
+  
   // Post xml message to UCP
   $( "#dopost" ).click(function() {
     // Load button spinner
@@ -100,6 +103,7 @@ $(document).ready(function(){
     .always(function() { 
       // Show UCP XML request 
       $("#response").removeClass("hide");
+      $(".urlstr").html($('#url').val());
       $("#ucpxml-request").html(formatXml(ucpxml, true));
       // Stop button spinner
       l.stop();

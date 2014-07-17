@@ -51,9 +51,10 @@ if (!empty($_POST['ip'])) {
   }
 }
 ?>
-<h3>Result: <?php print $message; ?></h3>
+<h3>Result: <?php if ($message) {print $message;} ?></h3>
 <p>An example based on AJAX and Bootstrap can be found at <a href="http://www.licab.se/clickcall">http://www.licab.se/clickcall</a>.</p>
-<p><a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for <a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden (<span class="email">olle.sjogren@licencia<span>null</span>.se</span>).</p>
+<p>By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for 
+<a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden.</p>
 </body>
 </html>
 
