@@ -19,7 +19,7 @@ function _post_request($url, $data, $optional_headers = NULL) {
   $response = @stream_get_contents($fp);
   if ($response === false) {
     throw new Exception("Problem reading data from $url, $php_errormsg");
-  }  
+  }
   return $response;
 }
 
@@ -27,13 +27,13 @@ function _post_request($url, $data, $optional_headers = NULL) {
 header("Content-type: text/xml");
 
 // Load xml data
-$data = file_get_contents('php://input'); 
+$data = file_get_contents('php://input');
 
 // Split the data
 $xml = simplexml_load_string($data);
 $ucpxml = (string) $xml->ucpxml;
 $ucpurl = $xml->ucpurl;
- 
+
 // Post XML
 try {
     $response = _post_request($ucpurl, $ucpxml);

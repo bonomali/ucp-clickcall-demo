@@ -20,16 +20,16 @@ function formatXml(xml, html_output) {
     } else {
       indent = 0;
     }
-     
+
     var padding = '';
     for (var i = 0; i < pad; i++) {
       padding += ' ';
     }
-     
+
     formatted += padding + node + '\r\n';
     pad += indent;
   });
- 
+
   if (html_output == true) {
     return formatted.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/ /g, '&nbsp;').replace(/\n/g,'<br />');
   } else {
@@ -38,12 +38,11 @@ function formatXml(xml, html_output) {
 }
 
 $(document).ready(function(){
-  
+
   // Default values. Only for test.
   $('#username').val("dude");
   $('#extension').val("499");
   $('#password').val("dude1971");
-  //$('#url').val("https://62.181.215.40:7878/ipecs_svc");
   $('#ip').val("62.181.215.40");
   $('#port').val("7878");
   $('#callto').val("401");
@@ -52,15 +51,15 @@ $(document).ready(function(){
   $( "#reset" ).click(function() {
     location.reload();
   });
-  
+
   // Init tooltip
   $('#tooltip').tooltip();
-  
+
   // Post xml message to UCP
   $( "#dopost" ).click(function() {
     // Load button spinner
     var l = Ladda.create(this);
-    l.start();     
+    l.start();
 
     // Build xml string
     var ucpxml = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ipecs_svc SYSTEM "iPECSService.dtd"><ipecs_svc><request type="service" encrypt="off" servicename="clicktocall"><clicktocall>'
@@ -70,15 +69,15 @@ $(document).ready(function(){
                + '</clicktocall></request></ipecs_svc>';
     var url = "https://" +  $('#ip').val() + ":" + $('#port').val() + "/ipecs_svc";
     var xmldata = '<data><ucpxml><![CDATA[' + ucpxml + ']]></ucpxml><ucpurl>' + url + '</ucpurl></data>';
-    
+
     // Post data
     $.ajax({
       url:"httppost.php",
       type: 'POST',
       timeout: 5000,
       data: xmldata,
-      contentType: "text/xml",	  
-      dataType: 'xml', 
+      contentType: "text/xml",
+      dataType: 'xml',
     })
     .done(function(xmlResponse){
       var errorMsg = $(xmlResponse).find('error').first().text();
@@ -94,24 +93,24 @@ $(document).ready(function(){
         } else {
           $("#error-messages").addClass("alert-warning");
         }
-        // Show UCP XML response 
+        // Show UCP XML response
         var xmlstr = xmlResponse.xml ? xmlResponse.xml : (new XMLSerializer()).serializeToString(xmlResponse);
-        $("#ucpxml-response").html(formatXml(xmlstr, true));      
+        $("#ucpxml-response").html(formatXml(xmlstr, true));
       }
     })
     .fail(function(xhr, ajaxOptions, thrownError){
       // Error messages
       $('#error-messages').html("AJAX error: " + xhr.status + " (" + thrownError + ")");
     })
-    .always(function() { 
-      // Show UCP XML request 
+    .always(function() {
+      // Show UCP XML request
       $("#response").removeClass("hide");
       $(".urlstr").html(url);
       $("#ucpxml-request").html(formatXml(ucpxml, true));
       // Stop button spinner
       l.stop();
     });
-    
+
   }); // End Post Message
 
 }); // End Document Ready

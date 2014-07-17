@@ -20,9 +20,6 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 .footer { display: table; }
 .footer .container { display: table-cell; text-align: center; vertical-align: middle; }
 
-
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   /*#port, #ip { width: 100%; display: block; }*/
 }
-
-
