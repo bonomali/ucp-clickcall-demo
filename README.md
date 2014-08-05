@@ -1,6 +1,6 @@
-ucp-sta-pgm
+ucp-clickcall-demo
 ===========
 
-Förslag på förbättrat användargränssnittet till UCP
+I have made a simple demo that uses the new ClickCall web service that is supported by Ericsson-LG iPECS UCP.
 
-Bra dropdown meny för mobiler http://astuteo.com/mobilemenu.
+A worjing demo and some documetation can be found on the page http://www.licab.se/clickcall/. If you have anny comments please use the [issue queue](https://github.com/ropaolle/ucp-clickcall-demo/issues).
