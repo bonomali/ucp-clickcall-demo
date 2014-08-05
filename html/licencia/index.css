@@ -8,7 +8,17 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 -------------------------------------------------- */
 .header { padding: 13px 0 10px; background-color: #f7f7f7; }
 .content { margin-bottom: 15px; }
+/*.cc-form { }*/
+
+.scroller { overflow: auto; }
+
 .form-inline .form-group { margin-bottom: 10px; }
+/*.form-inline #callto {  }
+.form-inline #buttons {}*/
+.form-inline .callto { display: block; width: 100%; }
+.form-inline #callto { display: block; width: 100%; }
+.form-inline .buttons { display: block; }
+
 .alert { overflow: hidden; }
 #status-label { display: inline-block; vertical-align: top; font-weight: normal; }
 #error-messages { clear: both; }

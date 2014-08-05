@@ -9,7 +9,6 @@
   <title>Clickcall Web Service Demo</title>
   <style type="text/css"> 
     input { display: block; margin-bottom: 10px; width: 200px; }
-    .email span { display: none; }
   </style>  
 </head>  
 <body>
@@ -57,8 +56,3 @@ if (!empty($_POST['ip'])) {
 <a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden.</p>
 </body>
 </html>
-
-<!--
-http://jquery-howto.blogspot.se/2013/09/jquery-cross-domain-ajax-request.html
-http://www.the-art-of-web.com/html/html5-form-validation/
--->
