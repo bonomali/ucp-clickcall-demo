@@ -9,6 +9,7 @@
   <title>Clickcall Web Service Demo</title>
   <style type="text/css"> 
     input { display: block; margin-bottom: 10px; width: 200px; }
+    .message { color: red; }
   </style>  
 </head>  
 <body>
@@ -33,6 +34,7 @@ function _post_request($url, $data, $optional_headers = NULL) {
   $response = @stream_get_contents($fp);
   return $response;
 }
+$message = '-';
 if (!empty($_POST['ip'])) {
   $xmldata = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ipecs_svc SYSTEM "iPECSService.dtd"><ipecs_svc><request type="service" encrypt="off" servicename="clicktocall"><clicktocall>';
   $xmldata .= '<userinfo><stnnum>' . $_POST['extension'] . '</stnnum><userid>' . $_POST['username'] . '</userid><userpwd encrypt="off">' . $_POST['password'] . '</userpwd></userinfo>';
@@ -50,9 +52,9 @@ if (!empty($_POST['ip'])) {
   }
 }
 ?>
-<h3>Result: <?php if ($message) {print $message;} ?></h3>
+<h3>Result: <span class="message"><?php if ($message) {print $message;} ?></span></h3>
 <p>An example based on AJAX and Bootstrap can be found at <a href="http://www.licab.se/clickcall">http://www.licab.se/clickcall</a>.</p>
 <p>By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for 
-<a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden.</p>
+<a target="_blank" href="https://www.ericssonlg-enterprise.com/" title="www.ericssonlg-enterprise.com"> Ericsson-LG Enterprise</a> in Sweden.</p>
 </body>
 </html>

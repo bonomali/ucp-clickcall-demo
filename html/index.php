@@ -32,14 +32,16 @@
 
   <!-- Fixed navbar -->
   <div class="header">
-    <div class="container">
-      <div class="pull-right">
-         <a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a>
+    <div class="container">      
+      <div class="logo-container pull-left">
+        <div class="logo"><a href="/clickcall"><img alt="" src="licencia/logo.png"></a></div>
+        <div class="logo-text">ClickCall Web Service Demo</div>
       </div>
-      <div class="logo"><img alt="" src="licencia/logo.png"></div>
-      <div class="logo-text">ClickCall Web Service Demo</div>
+      <div class="header-menu pull-right">
+         <a href="/clickcall/doc.php">Documentation</a> |  <a href="/clickcall/mini.php">Mini demo</a> | <a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a>
+      </div>
     </div>
-  </div>
+  </div>  
 
   <!-- Begin page content -->
   <div class="container">
@@ -47,53 +49,18 @@
     <div class="row">
 
       <!-- Description -->
-      <div class="col-md-7">
-      
-        <h2>UCP ClickCall</h2>
-        <p>The ClickCall service is the first open web service Ericsson-LG add to iPECS UCP. It is very basic and only holds one function, an external application can make a device that uses the IPKTU protocol dial any number.</p>
-        <p>This may not sound like much, but actually means you can do a lot of things. You can obviously call an internal or external number, but you can also activate features that uses codes dnd, forwarding and so on.</p>
+      <div class="col-md-7">      
         
-        <h2>Programming</h2>
-        <p>To activate ClickCall you need to enable the service in pgm 111 and associate it with a station in pgm 443.</p>
-
-
-<h4>Station Data / Common Attributes (111)</h4>
-<div class="scroller">
-<table class="table table-striped table-bordered table-hover table-condensed"><tbody>
-<tr bgcolor="#d9edf7" align="center" key="pgm111_mktbl"><th class="sort_num"> Order <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th> <input type="button" value="Uncheck All" class="btn_checkall" name="undefined"> </th><th class="sort_str"> Attribute <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th> Value </th><th> Range </th></tr>
-<tr key="pgm111_clickcall"><td> 13 </td><td> <input type="checkbox" value="undefined" class="chk_checkall" name="undefined" checked="checked"> </td><td> Click To Call Service </td><td> <select class="undefined" name="CLICKCALL"><option selected="" value="0">Disable</option><option value="1">Enable</option></select> </td><td>  </td></tr>
-</tbody></table>
-</div>
-
-<h4>System Data / System Attributes (160-161)</h4>
-<div class="scroller">
-<table class="table table-striped table-bordered table-hover table-condensed"><tbody>
-<tr bgcolor="#d9edf7" align="center" key="pgm160_mktbl"><th class="sort_num"> Order <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th class="sort_str"> Attribute <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th> Value </th><th> Range </th></tr>
-<tr key="pgm160_sys_msvcxmlport"><td> 83 </td><td> MSVC XML Port </td><td> <input type="text" value="7878" size="5" maxlength="5" name="SYS_MSVCXMLPORT" title="Check port numbers of Web Server, MobilePhone Presence Service, MSVC XML and the other services. Duplication is not allowed."> </td><td> 00001-65535 </td></tr>
-</tbody></table>       
-</div>
-
-<h4>Device Login / Station User Login (443)</h4>
-<div class="scroller">
-<table class="table table-striped table-bordered table-hover table-condensed"><tbody>
-<tr bgcolor="#d9edf7" align="center" key="pgm443_login_list_tbl"><th class="sort_num"> Index <img class="img_asce" src="licencia/sort_asce.png"></th><th class="sort_stanum"> Regstered Number <img class="img_asce" src="licencia/sort_asce.png"></th><th> Device Type </th><th> ID </th><th> Password </th><th> Zone </th><th> Desired Number </th><th> Nation Code </th><th> Language </th><th> Linked </th><th> Version </th><th> Remark </th></tr>
-<tr><td> 18 </td><td>409</td><td>LIP-8024D </td>
-<td> <input type="text" value="olle" size="4" maxlength="12" name="LOGIN_ID_18"> </td>
-<td> <input type="text" value="123abc" size="4" maxlength="12"  disabled="disabled" name="LOGIN_PWD_18"> </td>
-<td> <input type="text" value="1" size="2" maxlength="2" name="LOGIN_ZONE_18"> </td>
-<td> <input type="text" value="409" size="4" maxlength="8"  disabled="disabled" name="LOGIN_LOGSTN_18"> </td>
-<td> <select class="undefined" name="LOGIN_LANGDP_18"><option selected="" value="4">Swedish</option></select> </td>
-<td> <select class="undefined" name="LOGIN_LANGDP_18"><option selected="" value="4">Swedish</option></select> </td>
-<td>S</td><td>..</td>
-<td><input type="text" value="ClickCall Test" size="12" maxlength="21" name="LOGIN_CMT_18"> </td></tr></tbody>
-</tbody></table>      
-</div> 
-
+        <h1>UCP ClickCall Web Service</h1>
+        <p>The ClickCall service is the first open web service Ericsson-LG adds to iPECS UCP. It is very basic and only supports one function; an external application can make a device that uses IPKTU protocol dial any number.</p>
+        <p>This may not sound like much, but actually means you can do a lot of things. You can call internal or external number and use feature codes like dnd, forwarding and so on.</p>
+        <p><img alt="" src="licencia/gubbe.png"></p>
+        <h3>More information</h3>
+        <p>The try-it-out form on this page can be used to test the feature in your own UCP. I have also included a <a href="/clickcall/mini.php">minimalistic demo</a> that only includes the basic witch can be a good start if you like to try by yourself. </p>
+        <p>Basic documentation with an example of <a href="/clickcall/doc.php">how to configure ClickCall in iPECS UCP</a>.</p>
+        <p>The source code is available on <a href="https://github.com/ropaolle/ucp-clickcall-demo">GitHub</a>. If you have any comments please feel free to add a new issue in the <a href="https://github.com/ropaolle/ucp-clickcall-demo/issues">issue queue</a>.</p>
         
-        
-      </div> <!-- End col -->
-
-      
+      </div> <!-- End col -->      
       <div class="col-md-5">
       
         <h2>Try it out</h2>
@@ -154,7 +121,7 @@
     <div class="footer">
       <div class="container">
         By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for
-        <a target="_blank" href="http://www.ericssonlg.com/site/ericssonlg/menu/151.do" title="www.ericssonlg.com"> Ericsson-LG</a> in Sweden.
+        <a target="_blank" href="https://www.ericssonlg-enterprise.com/" title="www.ericssonlg-enterprise.com"> Ericsson-LG Enterprise</a> in Sweden.
       </div>
     </div>
    
