@@ -2,7 +2,11 @@
 -------------------------------------------------- */
 html { position: relative; min-height: 100%; }
 body { /* Margin bottom by footer height */ margin-bottom: 80px; }
-.footer { position: absolute; bottom: 0; width: 100%; /* Set the fixed height of the footer here */ height: 60px; background-color: #f5f5f5; }
+.footer { position: absolute; bottom: 0; width: 100%; /* Set the fixed height of the footer here */ height: auto; background-color: #f5f5f5; }
+.footer > .container { padding: 20px 15px; text-align: center; }
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  body { margin-bottom: 100px; } /* Footer spans over multiple rows, increas hight. */
+}
 
 /* Licencia
 -------------------------------------------------- */
@@ -21,11 +25,6 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 #response  { clear: both; }
 #response  .url { margin-bottom: 10px; }
 #ucpxml-response { margin-bottom: 10px; }
-.footer { display: table; }
-.footer .container { display: table-cell; text-align: center; vertical-align: middle; }
 img { max-width: 100%; }
 
-@media only screen and (min-width: 0px) and (max-width: 768px) {
-  .logo-container { clear: both; margin-right: 20px; }
-  .header-menu { float: left !important; }
-}
+

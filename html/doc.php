@@ -30,26 +30,39 @@
 
 <body>
 
-  <!-- Fixed navbar -->
-  <div class="header">
-    <div class="container">      
-      <div class="logo-container pull-left">
-        <div class="logo"><a href="/clickcall"><img alt="" src="licencia/logo.png"></a></div>
-        <div class="logo-text">ClickCall Web Service Demo</div>
+  <!-- Navbar -->
+  <div role="navigation" class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/clickcall" class="navbar-brand"><img alt="iPECS UCP" src="licencia/logo.png"></a>        
       </div>
-      <div class="header-menu pull-right">
-         <a href="/clickcall">Try it out</a> |  <a href="/clickcall/mini.php">Mini demo</a> | <a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a>
-      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/clickcall">Home</a></li>            
+          <li><a href="/clickcall/mini.php">Mini demo</a></li>
+          <li class="active"><a href="/clickcall/doc.php">Documentation</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
   </div>
 
   <!-- Begin page content -->
   <div class="container">
- 
-    <h1>iPECS UCP Configuration</h1>
-    <p>Before you can use ClickCall you need to enable the service and associate it with a device, e.g. LIP-8000.</p>
 
-    <h3>Select TCP port</h3>
+    <h1>Configure ClickCall in iPECS UCP</h1>    
+    <p>To be able to test the feature with the <a href="/clickcall">Try it out form</a> you need to start to configure your UCP and your firewall. But do not be alarmed, the process is quiet simple. Just follow this guide and you are ready to go.</p>
+    <p>Do not forget that ClickCall requires a license, but at least two ClickCall licenses is included by default.</p>
+
+    <h3>1. Select TCP port and port forward it to your UCP</h3>
     <p>ClickCall uses TCP port 7878, the port can be changed in pgm 160-161. Make sure to port forward TCP 7878 in your firewall to your UCP.</p>
     <h4>System Data / System Attributes (160-161)</h4>
     <div class="scroller">
@@ -59,7 +72,7 @@
     </tbody></table>       
     </div>
 
-    <h3>Enable ClickCall</h3>
+    <h3>2. Enable ClickCall</h3>
     <p>Next you need to enable ClickCall on all stations that should use the feature. This is done in pgm 111.</p>
     <h4>Station Data / Common Attributes (111)</h4>
     <div class="scroller">
@@ -69,7 +82,7 @@
     </tbody></table>
     </div>
 
-    <h3>Associate a station with a ClickCall user id</h3>
+    <h3>3. Associate a station with a ClickCall user id</h3>
     <p>To be able to use ClickCall we also need to give the station a username and a password. This is done in pgm 443.</p>
     <p>Let us assume that we like to give station 409 a username and a password. Set User ID = Olle, Password = 123abc and Desired Number = 409 and Save. This new virtual user id is now linked with station 409, i.e. the value Linked in pgm 443 is changed to S.</p>
     <h4>Device Login / Station User Login (443)</h4>

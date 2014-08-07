@@ -30,18 +30,31 @@
 
 <body>
 
-  <!-- Fixed navbar -->
-  <div class="header">
-    <div class="container">      
-      <div class="logo-container pull-left">
-        <div class="logo"><a href="/clickcall"><img alt="" src="licencia/logo.png"></a></div>
-        <div class="logo-text">ClickCall Web Service Demo</div>
+  <!-- Navbar -->
+  <div role="navigation" class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--a href="#" class="navbar-brand">iPECS UCP</a-->
+        <a href="/clickcall" class="navbar-brand"><img alt="iPECS UCP" src="licencia/logo.png"></a>
       </div>
-      <div class="header-menu pull-right">
-         <a href="/clickcall/doc.php">Documentation</a> |  <a href="/clickcall/mini.php">Mini demo</a> | <a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a>
-      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>            
+          <li><a href="/clickcall/mini.php">Mini demo</a></li>
+          <li><a href="/clickcall/doc.php">Documentation</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
-  </div>  
+  </div>
 
   <!-- Begin page content -->
   <div class="container">
@@ -53,7 +66,7 @@
         
         <h1>UCP ClickCall Web Service</h1>
         <p>The ClickCall service is the first open web service Ericsson-LG adds to iPECS UCP. It is very basic and only supports one function; an external application can make a device that uses IPKTU protocol dial any number.</p>
-        <p>This may not sound like much, but actually means you can do a lot of things. You can call internal or external number and use feature codes like dnd, forwarding and so on.</p>
+        <p>This may not sound like much, but actually means you can do a lot of things. You can call an internal or external number and use feature codes like dnd, forwarding and so on.</p>
         <p><img alt="" src="licencia/gubbe.png"></p>
         <h3>More information</h3>
         <p>The try-it-out form on this page can be used to test the feature in your own UCP. I have also included a <a href="/clickcall/mini.php">minimalistic demo</a> that only includes the basic witch can be a good start if you like to try by yourself. </p>
@@ -64,7 +77,7 @@
       <div class="col-md-5">
       
         <h2>Try it out</h2>
-        <p>This is a basic UCP ClickCall test form that can be used to test the web service. Before you can use this feature you need to port forward 7878 to your UCP.</p>
+        <p>This is a basic UCP ClickCall test form that can be used to test the web service. Before you can use this feature you need to <a href="/clickcall/doc.php">configure ClickCall in iPECS UCP</a>.</p>
         <!-- Form -->
         <form role="form" class="form-inline cc-form">
           <h4>UCP Connection</h4>
@@ -133,5 +146,7 @@
   <script src="licencia/spin.min.js"></script>
   <script src="licencia/ladda.min.js"></script>
   <script src="httppost.js"></script>
+  <script>
+
 </body>
 </html>
