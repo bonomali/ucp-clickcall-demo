@@ -12,6 +12,7 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 -------------------------------------------------- */
 .header { padding: 13px 0 10px; background-color: #f7f7f7; }
 .content { margin-bottom: 15px; }
+.jumbotron.block {    margin: 20px 0 0; padding: 1px 15px 15px; }
 .scroller { overflow: auto; }
 .form-inline .form-group { margin-bottom: 10px; }
 .form-inline .callto { display: block; width: 100%; }
@@ -26,5 +27,3 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 #response  .url { margin-bottom: 10px; }
 #ucpxml-response { margin-bottom: 10px; }
 img { max-width: 100%; }
-
-

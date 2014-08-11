@@ -57,11 +57,21 @@
 
   <!-- Begin page content -->
   <div class="container">
-
-    <h1>Configure ClickCall in iPECS UCP</h1>    
-    <p>To be able to test the feature with the <a href="/clickcall">Try it out form</a> you need to start to configure your UCP and your firewall. But do not be alarmed, the process is quiet simple. Just follow this guide and you are ready to go.</p>
-    <p>Do not forget that ClickCall requires a license, but at least two ClickCall licenses is included by default.</p>
-
+  
+    <div class="row">
+      <div class="col-sm-9">
+        <h1>Configure ClickCall in iPECS UCP</h1>    
+        <p>To be able to test the feature with the <a href="/clickcall">Try it out form</a> you need to start to configure your UCP and your firewall. But do not be alarmed, the process is quiet simple. Just follow this guide and you are ready to go.</p>
+        <p>Do not forget that ClickCall requires a license, but at least two ClickCall licenses is included by default.</p>      
+      </div>
+      <div class="col-sm-3">
+        <div class="jumbotron block">
+          <h4>Specification from Ericsson-LG</h4>
+          <a href="/clickcall/licencia/spec.pdf">Download Ericsson-LGs iPECS ClickCall SW Web Service Protocol Specification version 1.0.</a>          
+        </div>
+      </div>
+    </div>
+  
     <h3>1. Select TCP port and port forward it to your UCP</h3>
     <p>ClickCall uses TCP port 7878, the port can be changed in pgm 160-161. Make sure to port forward TCP 7878 in your firewall to your UCP.</p>
     <h4>System Data / System Attributes (160-161)</h4>
@@ -99,17 +109,17 @@
     <td>S</td><td>..</td>
     <td><input type="text" value="ClickCall Test" size="12" maxlength="21" name="LOGIN_CMT_18"> </td></tr></tbody>
     </tbody></table>      
-    </div> 
-
+    </div>       
+      
   </div> <!-- End container -->
-
-    <!-- Site footer -->
-    <div class="footer">
-      <div class="container">
-        By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for
-        <a target="_blank" href="https://www.ericssonlg-enterprise.com/" title="www.ericssonlg-enterprise.com"> Ericsson-LG Enterprise</a> in Sweden.
-      </div>
+    
+  <!-- Site footer -->
+  <div class="footer">
+    <div class="container">
+      By <a href="mailto:olle.sjogren@licencia.se" target="_top">Olle Sjögren</a>, 2014. <a href="http://www.licencia.se">Licencia Telecom AB</a> distributor for
+      <a target="_blank" href="https://www.ericssonlg-enterprise.com/" title="www.ericssonlg-enterprise.com"> Ericsson-LG Enterprise</a> in Sweden.
     </div>
+  </div>
    
   <!-- Bootstrap core JavaScript
   ================================================== -->
