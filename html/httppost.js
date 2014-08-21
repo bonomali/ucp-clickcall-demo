@@ -40,12 +40,12 @@ function formatXml(xml, html_output) {
 $(document).ready(function(){
 
   // Default values. Only for test.
-  $('#username').val("dude");
-  $('#extension').val("499");
-  $('#password').val("dude1971");
-  $('#ip').val("62.181.215.40");
+  //$('#username').val("dude");
+  //$('#extension').val("499");
+  //$('#password').val("dude1971");
+  //$('#ip').val("62.181.215.40");
   $('#port').val("7878");
-  $('#callto').val("401");
+  //$('#callto').val("401");
 
   // Reloade page
   $( "#reset" ).click(function() {
