@@ -27,3 +27,4 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 #response  .url { margin-bottom: 10px; }
 #ucpxml-response { margin-bottom: 10px; }
 img { max-width: 100%; }
+.removed-stuff { color: gray; text-decoration: line-through; }

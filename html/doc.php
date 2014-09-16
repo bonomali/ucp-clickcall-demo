@@ -78,7 +78,7 @@
     <div class="scroller">
     <table class="table table-striped table-bordered table-hover table-condensed"><tbody>
     <tr bgcolor="#d9edf7" align="center" key="pgm160_mktbl"><th class="sort_num"> Order <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th class="sort_str"> Attribute <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th> Value </th><th> Range </th></tr>
-    <tr key="pgm160_sys_msvcxmlport"><td> 83 </td><td> MSVC XML Port </td><td> <input type="text" value="7878" size="5" maxlength="5" name="SYS_MSVCXMLPORT" title="Check port numbers of Web Server, MobilePhone Presence Service, MSVC XML and the other services. Duplication is not allowed."> </td><td> 00001-65535 </td></tr>
+    <tr key="pgm160_sys_msvcxmlport"><td> 83 </td><td> Click To Call Service  </td><td> <input type="text" value="7878" size="5" maxlength="5" name="SYS_MSVCXMLPORT" title="Check port numbers of Web Server, MobilePhone Presence Service, MSVC XML and the other services. Duplication is not allowed."> </td><td> 00001-65535 </td></tr>
     </tbody></table>       
     </div>
 
@@ -92,7 +92,14 @@
     </tbody></table>
     </div>
 
-    <h3>3. Associate a station with a ClickCall user id</h3>
+    <h3>3. Create a station password</h3>
+    <p>To be able to use ClickCall we also need to set a station password. This is done in pgm 227. Note that the password only can include digits, max 12. <i>From MFIM version A.0Bl the password is defined in pgm 227, and not in pgm 443.</i></p>
+    <h4>System Authorization Code Table(227)</h4>    
+    <table class="table table-striped table-bordered table-hover table-condensed">
+    <tbody><tr bgcolor="#d9edf7" align="center" key="pgm227_mktbl_actbl"><th class="sort_stanum"> Station Number <img class="img_asce" src="licencia/sort_asce.png"><img style="display:none;" class="img_desc" src="licencia/sort_desc.png"></th><th> Authorization Code </th><th colspan="3"> COS </th></tr><tr><td> 409 </td><td> <input type="text" value="12345678" size="15" maxlength="12" name="ADM227_AUTH_5"> </td><td> Day   <select class="undefined" name="ADM227_DAY_5"><option selected="" value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></td><td> Night   <select class="undefined" name="ADM227_NTRING_5"><option selected=""  value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></td><td> Timed Ring   <select class="undefined" name="ADM227_TIMED_5"><option selected="" value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></td></tr></tbody>
+    </table>
+        
+    <div class="removed-stuff">
     <p>To be able to use ClickCall we also need to give the station a username and a password. This is done in pgm 443.</p>
     <p>Let us assume that we like to give station 409 a username and a password. Set User ID = Olle, Password = 123abc and Desired Number = 409 and Save. This new virtual user id is now linked with station 409, i.e. the value Linked in pgm 443 is changed to S.</p>
     <h4>Device Login / Station User Login (443)</h4>
@@ -110,6 +117,7 @@
     <td><input type="text" value="ClickCall Test" size="12" maxlength="21" name="LOGIN_CMT_18"> </td></tr></tbody>
     </tbody></table>      
     </div>       
+    </div>
       
   </div> <!-- End container -->
     
