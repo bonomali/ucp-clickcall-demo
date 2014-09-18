@@ -12,14 +12,13 @@
 
   <!-- Bootstrap core CSS -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="licencia/bootstrapValidator.min.css" rel="stylesheet">
   <link href="licencia/ladda-themeless.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="licencia/index.css" rel="stylesheet">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="licencia/ie10-viewport-bug-workaround.js"></script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -96,20 +95,23 @@
           </div>
           <div class="form-group">
             <label for="password" class="control-label sr-only">Password</label>
-            <input type="text" class="form-control input-lg" id="password" placeholder="Password" required>
+            <input type="password" class="form-control input-lg" id="password" placeholder="Password" required>
           </div>
           <div class="form-group">
             <label for="extension" class="control-label sr-only">Extension number</label>
             <input type="text" class="form-control input-lg" id="extension" placeholder="Extension number" required>
           </div>
+          <div class="form-group buttons pull-right">
+            <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="reset">Reset</button>
+            <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="save">Save</button>
+          </div>          
           <h4>Number to call</h4>
           <div class="form-group callto">
             <label for="callto" class="control-label sr-only">Call to</label>
             <input type="text" class="form-control input-lg" id="callto" placeholder="Phone number" required>
           </div>
           <div class="form-group buttons">
-          <button type="reset" class="btn btn-primary btn-lg pull-right" id="reset">Reset</button>
-          <button type="button" class="btn btn-success btn-lg ladda-button pull-right" data-style="expand-right" id="dopost"><span class="ladda-label">Call</span></button>
+            <button type="button" class="btn btn-success btn-lg ladda-button pull-right" data-style="expand-right" id="dopost"><span class="ladda-label">Call</span></button>
           </div>
           <!-- Alert -->
           <div id="error-messages" class="alert" role="alert"></div>
@@ -143,6 +145,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
   <script src="licencia/spin.min.js"></script>
   <script src="licencia/ladda.min.js"></script>
   <script src="httppost.js"></script>

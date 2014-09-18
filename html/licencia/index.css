@@ -22,7 +22,7 @@ body { /* Margin bottom by footer height */ margin-bottom: 80px; }
 #status-label { display: inline-block; vertical-align: top; font-weight: normal; }
 #error-messages { clear: both; }
 #error-messages:empty { display: none; }
-#reset.btn, #dopost.btn { margin-left: 10px; margin-bottom: 15px; }
+/*#reset.btn, #dopost.btn { margin-left: 10px; margin-bottom: 15px; }*/
 #response  { clear: both; }
 #response  .url { margin-bottom: 10px; }
 #ucpxml-response { margin-bottom: 10px; }

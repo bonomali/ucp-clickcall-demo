@@ -44,16 +44,53 @@ $(document).ready(function(){
   //$('#extension').val("499");
   //$('#password').val("dude1971");
   //$('#ip').val("62.181.215.40");
-  $('#port').val("7878");
+  //$('#port').val("7878");
   //$('#callto').val("401");
+  
+  function loadSettings() {
+    // HELP: https://github.com/carhartl/jquery-cookie
+    $('#username').val($.cookie('cc-username'));
+    $('#extension').val($.cookie('extension'));
+    $('#password').val($.cookie('password'));
+    $('#ip').val($.cookie('ip'));
+    if ($.cookie('port') || $.cookie('port')=="") { 
+      $('#port').val($.cookie('port')); 
+    } else {
+      $('#port').val("7878");
+    }
+  }  
 
+  loadSettings();
+
+  // Show spiner 0,5 sec
+	Ladda.bind( '#save, #reset', { timeout: 500 } );
+  
   // Reloade page
   $( "#reset" ).click(function() {
-    location.reload();
+    $.removeCookie('cc-username'); 
+    $.removeCookie('extension'); 
+    $.removeCookie('password'); 
+    $.removeCookie('ip'); 
+    $.removeCookie('port'); 
+    loadSettings();
+    //location.reload();
   });
 
   // Init tooltip
-  $('#tooltip').tooltip();
+  // $('#tooltip').tooltip();
+  
+  // Save settings
+  $( "#save" ).click(function() {    
+    var cookieDays = 365 * 2 // 2 years
+    $.cookie('cc-username', $('#username').val(), cookieDays);
+    $.cookie('extension', $('#extension').val(), cookieDays);
+    $.cookie('password', $('#password').val(), cookieDays);
+    $.cookie('ip', $('#ip').val(), cookieDays);
+    $.cookie('port', $('#port').val(), cookieDays);   
+    var l = Ladda.create(this);
+    l.start();    
+  });
+  
 
   // Post xml message to UCP
   $( "#dopost" ).click(function() {
