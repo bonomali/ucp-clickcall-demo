@@ -44,7 +44,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>            
+          <li class="active"><a href="#">Home</a></li>
           <li><a href="/clickcall/mini.php">Mini demo</a></li>
           <li><a href="/clickcall/doc.php">Documentation</a></li>
         </ul>
@@ -61,8 +61,8 @@
     <div class="row">
 
       <!-- Description -->
-      <div class="col-md-7">      
-        
+      <div class="col-md-7">
+
         <h1>UCP ClickCall Web Service</h1>
         <p>The ClickCall service is the first open web service Ericsson-LG adds to iPECS UCP. It is very basic and only supports one function; an external application can make a device that uses IPKTU protocol dial any number.</p>
         <p>This may not sound like much, but actually means you can do a lot of things. You can call an internal or external number and use feature codes like dnd, forwarding and so on.</p>
@@ -71,10 +71,10 @@
         <p>The try-it-out form on this page can be used to test the feature in your own UCP. I have also included a <a href="/clickcall/mini.php">minimalistic demo</a> that only includes the basic witch can be a good start if you like to try by yourself. </p>
         <p>Basic documentation with an example of <a href="/clickcall/doc.php">how to configure ClickCall in iPECS UCP</a>.</p>
         <p>The source code is available on <a href="https://github.com/ropaolle/ucp-clickcall-demo">GitHub</a>. If you have any comments please feel free to add a new issue in the <a href="https://github.com/ropaolle/ucp-clickcall-demo/issues">issue queue</a>.</p>
-        
-      </div> <!-- End col -->      
+
+      </div> <!-- End col -->
       <div class="col-md-5">
-      
+
         <h2>Try it out</h2>
         <p>This is a basic UCP ClickCall test form that can be used to test the web service. Before you can use this feature you need to <a href="/clickcall/doc.php">configure ClickCall in iPECS UCP</a>.</p>
         <!-- Form -->
@@ -104,7 +104,7 @@
           <div class="form-group buttons pull-right">
             <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="reset">Reset</button>
             <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="save">Save</button>
-          </div>          
+          </div>
           <h4>Number to call</h4>
           <div class="form-group callto">
             <label for="callto" class="control-label sr-only">Call to</label>
@@ -139,7 +139,7 @@
         <a target="_blank" href="https://www.ericssonlg-enterprise.com/" title="www.ericssonlg-enterprise.com"> Ericsson-LG Enterprise</a> in Sweden.
       </div>
     </div>
-   
+
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -149,7 +149,5 @@
   <script src="licencia/spin.min.js"></script>
   <script src="licencia/ladda.min.js"></script>
   <script src="httppost.js"></script>
-  <script>
-
 </body>
 </html>
