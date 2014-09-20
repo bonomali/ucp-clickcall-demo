@@ -43,7 +43,7 @@ try {
 
 
 // Log to file
-$file = 'log.txt';
+$file = 'log/log.txt';
 // Open the file to get existing content
 $current = file_get_contents($file);
 // Append a new person to the file

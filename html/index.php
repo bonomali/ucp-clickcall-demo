@@ -110,8 +110,8 @@
             <label for="callto" class="control-label sr-only">Call to</label>
             <input type="text" class="form-control input-lg" id="callto" placeholder="Phone number" required>
           </div>
-          <div class="form-group buttons">
-            <button type="button" class="btn btn-success btn-lg ladda-button pull-right" data-style="expand-right" id="dopost"><span class="ladda-label">Call</span></button>
+          <div class="form-group pull-right">
+            <button type="button" class="btn btn-success btn-lg ladda-button" data-style="expand-right" id="dopost"><span class="ladda-label">Send number</span></button>
           </div>
           <!-- Alert -->
           <div id="error-messages" class="alert" role="alert"></div>
