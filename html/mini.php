@@ -17,7 +17,6 @@
 <form action="mini.php" method="post" enctype="multipart/form-data">            
   <input type="text" class="form-control input-lg" name="ip" placeholder="UCP IP Address" required>
   <input type="number" class="form-control input-lg" name="port" placeholder="Port" value="7878">
-  <input type="text" class="form-control input-lg" name="username" placeholder="User name" required>
   <input type="number" class="form-control input-lg" name="extension" placeholder="Extension number" required>
   <input type="text" class="form-control input-lg" name="password" placeholder="Password" required>
   <input type="number" class="form-control input-lg" name="callto" placeholder="Phone number" required>           
@@ -37,7 +36,7 @@ function _post_request($url, $data, $optional_headers = NULL) {
 $message = '-';
 if (!empty($_POST['ip'])) {
   $xmldata = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ipecs_svc SYSTEM "iPECSService.dtd"><ipecs_svc><request type="service" encrypt="off" servicename="clicktocall"><clicktocall>';
-  $xmldata .= '<userinfo><stnnum>' . $_POST['extension'] . '</stnnum><userid>' . $_POST['username'] . '</userid><userpwd encrypt="off">' . $_POST['password'] . '</userpwd></userinfo>';
+  $xmldata .= '<userinfo><stnnum>' . $_POST['extension'] . '</stnnum><userid>' . $_POST['extension'] . '</userid><userpwd encrypt="off">' . $_POST['password'] . '</userpwd></userinfo>';
   $xmldata .= '<srcinfo><dialnum>' . $_POST['extension'] . '</dialnum></srcinfo>';
   $xmldata .= '<destinfo calltype="single"><dialnum>' . $_POST['callto'] . '</dialnum></destinfo>';
   $xmldata .= '</clicktocall></request></ipecs_svc>';

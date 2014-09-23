@@ -44,9 +44,10 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="/clickcall/mini.php">Mini demo</a></li>
+          <li class="active"><a href="#">Home</a></li>          
           <li><a href="/clickcall/doc.php">Documentation</a></li>
+          <li><a href="/clickcall/mini.php" target="_blank">Mini demo</a></li>
+          <li><a href="/ccm" target="_blank">Mobile demo</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a></li>
@@ -67,11 +68,15 @@
         <p>The ClickCall service is the first open web service Ericsson-LG adds to iPECS UCP. It is very basic and only supports one function; an external application can make a device that uses IPKTU protocol dial any number.</p>
         <p>This may not sound like much, but actually means you can do a lot of things. You can call an internal or external number and use feature codes like dnd, forwarding and so on.</p>
         <p><img alt="" src="licencia/gubbe.png"></p>
+
         <h3>More information</h3>
         <p>The try-it-out form on this page can be used to test the feature in your own UCP. I have also included a <a href="/clickcall/mini.php">minimalistic demo</a> that only includes the basic witch can be a good start if you like to try by yourself. </p>
         <p>Basic documentation with an example of <a href="/clickcall/doc.php">how to configure ClickCall in iPECS UCP</a>.</p>
         <p>The source code is available on <a href="https://github.com/ropaolle/ucp-clickcall-demo">GitHub</a>. If you have any comments please feel free to add a new issue in the <a href="https://github.com/ropaolle/ucp-clickcall-demo/issues">issue queue</a>.</p>
-
+  
+        <h3>Mobile demo</h3>      
+        <p>A <a href="/ccs">smartphone demo</a> that shows how to use ClickCall in a more mobile friendly way have now also been added. The source code is available on <a href="https://github.com/ropaolle/ucp-clickcall-mobile">GitHub</a>.</p>
+  
       </div> <!-- End col -->
       <div class="col-md-5">
 

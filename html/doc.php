@@ -42,9 +42,10 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/clickcall">Home</a></li>
-          <li><a href="/clickcall/mini.php">Mini demo</a></li>
+          <li><a href="/clickcall">Home</a></li>          
           <li class="active"><a href="/clickcall/doc.php">Documentation</a></li>
+          <li><a href="/clickcall/mini.php" target="_blank">Mini demo</a></li>
+          <li><a href="/ccm" target="_blank">Mobile demo</a></li>          
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a></li>
