@@ -39,17 +39,9 @@ function formatXml(xml, html_output) {
 
 $(document).ready(function(){
 
-  // Default values. Only for test.
-  //$('#username').val("dude");
-  //$('#extension').val("499");
-  //$('#password').val("dude1971");
-  //$('#ip').val("62.181.215.40");
-  //$('#port').val("7878");
-  //$('#callto').val("401");
-  
   function loadSettings() {
     // HELP: https://github.com/carhartl/jquery-cookie
-    $('#username').val($.cookie('cc-username'));
+    //$('#username').val($.cookie('cc-username'));
     $('#extension').val($.cookie('extension'));
     $('#password').val($.cookie('password'));
     $('#ip').val($.cookie('ip'));
@@ -67,7 +59,7 @@ $(document).ready(function(){
   
   // Reloade page
   $( "#reset" ).click(function() {
-    $.removeCookie('cc-username'); 
+    //$.removeCookie('cc-username'); 
     $.removeCookie('extension'); 
     $.removeCookie('password'); 
     $.removeCookie('ip'); 
@@ -82,7 +74,7 @@ $(document).ready(function(){
   // Save settings
   $( "#save" ).click(function() {    
     var cookieDays = 365 * 2 // 2 years
-    $.cookie('cc-username', $('#username').val(), cookieDays);
+    //$.cookie('cc-username', $('#username').val(), cookieDays);
     $.cookie('extension', $('#extension').val(), cookieDays);
     $.cookie('password', $('#password').val(), cookieDays);
     $.cookie('ip', $('#ip').val(), cookieDays);
@@ -100,7 +92,7 @@ $(document).ready(function(){
 
     // Build xml string
     var ucpxml = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ipecs_svc SYSTEM "iPECSService.dtd"><ipecs_svc><request type="service" encrypt="off" servicename="clicktocall"><clicktocall>'
-               + '<userinfo><stnnum>' + $('#extension').val() + '</stnnum><userid>' + $('#username').val() + '</userid><userpwd encrypt="off">' + $('#password').val() + '</userpwd></userinfo>'
+               + '<userinfo><stnnum>' + $('#extension').val() + '</stnnum><userid>' + $('#extension').val() + '</userid><userpwd encrypt="off">' + $('#password').val() + '</userpwd></userinfo>'
                + '<srcinfo><dialnum>' + $('#extension').val() + '</dialnum></srcinfo>'
                + '<destinfo calltype="single"><dialnum>' + $('#callto').val() + '</dialnum></destinfo>'
                + '</clicktocall></request></ipecs_svc>';

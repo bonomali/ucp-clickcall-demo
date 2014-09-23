@@ -88,24 +88,24 @@
             <label for="port" class="control-label sr-only">UCP port</label>
             <input type="text" class="form-control input-lg" id="port" placeholder="Port" required>
           </div>
-         <h4>Extension settings</h4>
-          <div class="form-group">
+         <!--h4>Extension settings</h4-->
+          <!--div class="form-group">
             <label for="username" class="control-label sr-only">Username</label>
             <input type="text" class="form-control input-lg" id="username" placeholder="User name" required>
+          </div-->
+          <div class="form-group">
+            <label for="extension" class="control-label sr-only">Extension number</label>
+            <input type="text" class="form-control input-lg" id="extension" placeholder="Extension number" required>
           </div>
           <div class="form-group">
             <label for="password" class="control-label sr-only">Password</label>
             <input type="password" class="form-control input-lg" id="password" placeholder="Password" required>
           </div>
-          <div class="form-group">
-            <label for="extension" class="control-label sr-only">Extension number</label>
-            <input type="text" class="form-control input-lg" id="extension" placeholder="Extension number" required>
-          </div>
-          <div class="form-group buttons pull-right">
+          <div class="form-group right">
             <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="reset">Reset</button>
             <button type="button" class="btn btn-primary btn-lg ladda-button" data-style="expand-right" id="save">Save</button>
           </div>
-          <h4>Number to call</h4>
+          <h4 class="clearfix">Number to call</h4>
           <div class="form-group callto">
             <label for="callto" class="control-label sr-only">Call to</label>
             <input type="text" class="form-control input-lg" id="callto" placeholder="Phone number" required>
