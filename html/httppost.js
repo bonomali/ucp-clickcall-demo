@@ -89,12 +89,22 @@ $(document).ready(function(){
     // Load button spinner
     var l = Ladda.create(this);
     l.start();
+    
+    console.log($('#callto').val().toLowerCase());
+    
+    // Hangup
+    var destinfo;
+    if ($('#callto').val().toLowerCase() == 'h') {
+      destinfo = '<destinfo calltype="hangup"><dialnum>0000</dialnum></destinfo>';
+    } else {
+      destinfo = '<destinfo calltype="single"><dialnum>' + $('#callto').val() + '</dialnum></destinfo>';      
+    }
 
     // Build xml string
     var ucpxml = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ipecs_svc SYSTEM "iPECSService.dtd"><ipecs_svc><request type="service" encrypt="off" servicename="clicktocall"><clicktocall>'
                + '<userinfo><stnnum>' + $('#extension').val() + '</stnnum><userid>' + $('#extension').val() + '</userid><userpwd encrypt="off">' + $('#password').val() + '</userpwd></userinfo>'
                + '<srcinfo><dialnum>' + $('#extension').val() + '</dialnum></srcinfo>'
-               + '<destinfo calltype="single"><dialnum>' + $('#callto').val() + '</dialnum></destinfo>'
+               + destinfo
                + '</clicktocall></request></ipecs_svc>';
     var url = "https://" +  $('#ip').val() + ":" + $('#port').val() + "/ipecs_svc";
     var xmldata = '<data><ucpxml><![CDATA[' + ucpxml + ']]></ucpxml><ucpurl>' + url + '</ucpurl></data>';

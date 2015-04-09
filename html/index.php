@@ -64,7 +64,7 @@
       <!-- Description -->
       <div class="col-md-7">
 
-        <h1>UCP ClickCall Web Service</h1>
+        <h1>UCP ClickCall Web Service2</h1>
         <p>The ClickCall service is the first open web service Ericsson-LG adds to iPECS UCP. It is very basic and only supports one function; an external application can make a device that uses IPKTU protocol dial any number.</p>
         <p>This may not sound like much, but actually means you can do a lot of things. You can call an internal or external number and use feature codes like dnd, forwarding and so on.</p>
         <p><img alt="" src="licencia/gubbe.png"></p>
