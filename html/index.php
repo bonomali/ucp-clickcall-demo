@@ -47,7 +47,7 @@
           <li class="active"><a href="#">Home</a></li>          
           <li><a href="/clickcall/doc.php">Documentation</a></li>
           <li><a href="/clickcall/mini.php" target="_blank">Mini demo</a></li>
-          <li><a href="/af" target="_blank">Mobile demo</a></li>
+          <li><a href="/ccm" target="_blank">Mobile demo</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="https://github.com/ropaolle/ucp-clickcall-demo">View on GitHub</a></li>
@@ -131,10 +131,10 @@
             <h4>XML Request to UCP</h4>
             <div id="ucpxml-request" class="">...</div>
           </div>
-        </div>
+        </div>        
 
       </div> <!-- End col -->
-    </div> <!-- End row -->
+    </div> <!-- End row -->    
   </div> <!-- End container -->
 
     <!-- Site footer -->
